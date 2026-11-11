@@ -1,5 +1,5 @@
 
-const TARGET_MONEY = 500;
+const TARGET_MONEY = 300;
 
 
 const recipes = [
