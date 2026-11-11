@@ -1,5 +1,5 @@
 
-const TARGET_MONEY = 300;
+const TARGET_MONEY = 250;
 
 
 const recipes = [
@@ -14,7 +14,7 @@ const recipes = [
     name: "Chocolate Cookie",
     emoji: "🍪",
     description: "A crunchy cookie filled with chocolate!",
-    reward: 25,
+    reward: 30,
     ingredients: ["flour", "sugar", "chocolate", "butter"]
   },
   {
@@ -35,7 +35,7 @@ const recipes = [
     name: "Strawberry Milkshake",
     emoji: "🥤",
     description: "A refreshing strawberry drink!",
-    reward: 20,
+    reward: 45,
     ingredients: ["milk", "strawberry", "cream"]
   },
   {
@@ -102,7 +102,7 @@ const ingredientsInfo = {
   blueberry: { name: "Blueberry", emoji: "🫐" },
   honey: { name: "Honey", emoji: "🍯" },
   vanilla: { name: "Vanilla", emoji: "🌼" },
-  cinnamon: { name: "Cinnamon", emoji: "🪵" },
+  cinnamon: { name: "Cinnamon", emoji: "😋" },
   cheese: { name: "Cream Cheese", emoji: "🧀" }
 };
 
