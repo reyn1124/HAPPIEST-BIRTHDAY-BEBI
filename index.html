@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinnamoroll's Birthday Bakery ♡</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- FLOATING CLOUDS -->
+  <div class="cloud cloud-one">☁</div>
+  <div class="cloud cloud-two">☁</div>
+  <div class="cloud cloud-three">☁</div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">☁ Cinnamoroll's Bakery ♡</div>
+    <div class="header-subtitle">A little bakery made with love</div>
+  </header>
+
+  <main>
+
+    <!-- WELCOME -->
+    <section class="welcome">
+      <div class="character">૮ ˶ᵔ ᵕ ᵔ˶ ა</div>
+      <p class="eyebrow">WELCOME, LITTLE BAKER!</p>
+
+      <h1>Sweet Birthday<br>Bakery</h1>
+
+      <p class="welcome-text">
+        Cinnamoroll needs your help running his little bakery!
+        Serve customers, bake delicious treats, earn money,
+        and unlock a very special birthday surprise.
+      </p>
+
+      <div class="welcome-decoration">♡ ✧ ☁ ✧ ♡</div>
+    </section>
+
+    <!-- MONEY -->
+    <section class="money-card">
+      <div>
+        <span class="money-label">YOUR BAKERY EARNINGS</span>
+        <h2>₱<span id="money">0</span></h2>
+      </div>
+
+      <div class="coin-icon">🪙</div>
+
+      <div class="progress-area">
+        <div class="progress-label">
+          <span>Birthday letter progress</span>
+          <span id="progress-text">0 / 500</span>
+        </div>
+
+        <div class="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GAME -->
+    <section class="game-section">
+
+      <div class="section-heading">
+        <span>🧁</span>
+        <div>
+          <h2>Cinnamoroll's Little Bakery</h2>
+          <p>Your little business adventure starts here!</p>
+        </div>
+      </div>
+
+      <!-- MASCOT -->
+      <div class="mascot-card">
+        <div class="mascot">૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა</div>
+        <div>
+          <h3>Hi, little baker! ☁️</h3>
+          <p>Cinnamoroll is ready to help you run the bakery! ♡</p>
+        </div>
+      </div>
+
+      <!-- CUSTOMER COUNTER -->
+      <div class="station-card">
+
+        <div class="station-title">
+          <span>🛎️</span>
+          <div>
+            <h3>Customer Counter</h3>
+            <p>Welcome your next customer!</p>
+          </div>
+        </div>
+
+        <div class="customer-display">
+          <div class="customer-emoji" id="customer-emoji">🐰</div>
+
+          <div>
+            <span class="order-tag">YOUR CUSTOMER</span>
+            <h3 id="customer-name">Waiting for customers</h3>
+            <p id="customer-message">
+              Click below to welcome your first customer!
+            </p>
+          </div>
+        </div>
+
+        <button id="take-order-button" class="station-button blue-button">
+          🛎️ Take Customer Order
+        </button>
+
+        <div class="order-card">
+          <div class="order-emoji" id="order-emoji">🧁</div>
+
+          <div class="order-info">
+            <span class="order-tag">CUSTOMER ORDER</span>
+            <h3 id="order-name">Waiting for an order...</h3>
+            <p id="order-description">Your customer wants something yummy!</p>
+
+            <div class="reward">
+              Payment: <strong id="order-reward">₱0</strong>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+<!-- CINNAMOROLL RECIPE BOOK -->
+<div class="recipe-book-card">
+
+  <div class="recipe-book-header">
+    <div class="recipe-book-icon">📖</div>
+    <div>
+      <span class="recipe-book-label">CINNAMOROLL'S SECRET RECIPES</span>
+      <h3>My Little Recipe Book ♡</h3>
+      <p>Don't know what to bake? Check the recipes here!</p>
+    </div>
+  </div>
+
+  <button class="recipe-book-button" id="recipe-book-button">
+    📖 Open Recipe Book
+  </button>
+
+  <div class="recipe-book-content" id="recipe-book-content" hidden>
+    <div class="recipe-book-intro">
+      ☁️ Welcome to Cinnamoroll's recipe collection!
+      Pick a dessert and follow its ingredient list.
+    </div>
+
+    <div class="recipe-list" id="recipe-list"></div>
+
+    <div class="recipe-book-footer">
+      ♡ Made with love, flour, and a little bit of magic! ♡
+    </div>
+  </div>
+
+</div>
+
+      <!-- BAKING STATION -->
+      <div class="station-card">
+
+        <div class="station-title">
+          <span>🧁</span>
+          <div>
+            <h3>Baking Station</h3>
+            <p>Prepare your customer's delicious order!</p>
+          </div>
+        </div>
+
+        <p class="instruction">
+          ♡ Choose the correct ingredients for the recipe!
+        </p>
+
+       
+<div class="ingredients" id="ingredients">
+
+  <button class="ingredient" data-item="flour">
+    <span>🌾</span> Flour
+  </button>
+
+  <button class="ingredient" data-item="milk">
+    <span>🥛</span> Milk
+  </button>
+
+  <button class="ingredient" data-item="strawberry">
+    <span>🍓</span> Strawberry
+  </button>
+
+  <button class="ingredient" data-item="sugar">
+    <span>🍬</span> Sugar
+  </button>
+
+  <button class="ingredient" data-item="egg">
+    <span>🥚</span> Egg
+  </button>
+
+  <button class="ingredient" data-item="chocolate">
+    <span>🍫</span> Chocolate
+  </button>
+
+  <button class="ingredient" data-item="butter">
+    <span>🧈</span> Butter
+  </button>
+
+  <button class="ingredient" data-item="cream">
+    <span>🍦</span> Cream
+  </button>
+
+  <button class="ingredient" data-item="banana">
+    <span>🍌</span> Banana
+  </button>
+
+  <button class="ingredient" data-item="blueberry">
+    <span>🫐</span> Blueberry
+  </button>
+
+  <button class="ingredient" data-item="honey">
+    <span>🍯</span> Honey
+  </button>
+
+  <button class="ingredient" data-item="vanilla">
+    <span>🌼</span> Vanilla
+  </button>
+
+  <button class="ingredient" data-item="cinnamon">
+    <span>🪵</span> Cinnamon
+  </button>
+
+  <button class="ingredient" data-item="cheese">
+    <span>🧀</span> Cream Cheese
+  </button>
+
+</div>
+
+        </div>
+
+        <div class="selected-area">
+          <p>Your mixing bowl:</p>
+
+          <div id="selected-ingredients" class="selected-ingredients">
+            <span class="empty-bowl">Nothing added yet...</span>
+          </div>
+        </div>
+
+        <button class="station-button blue-button" id="bake-button" disabled>
+          🥣 Bake the Order!
+        </button>
+
+        <button class="clear-button" id="clear-button" disabled>
+          Clear ingredients
+        </button>
+
+        <div id="game-message" class="game-message">
+          Cinnamoroll is waiting for your first order! ☁️
+        </div>
+
+      </div>
+
+      <!-- SERVING COUNTER -->
+      <div class="station-card">
+
+        <div class="station-title">
+          <span>🍰</span>
+          <div>
+            <h3>Serving Counter</h3>
+            <p>Give the customer their delicious treat!</p>
+          </div>
+        </div>
+
+        <div class="serving-display" id="serving-display">
+          <span>🧺</span>
+          <p>Your finished treats will appear here!</p>
+        </div>
+
+        <button class="station-button pink-button" id="serve-button" disabled>
+          🍰 Serve Customer
+        </button>
+
+      </div>
+
+      <!-- CASHIER COUNTER -->
+      <div class="station-card cashier-card">
+
+        <div class="station-title">
+          <span>💰</span>
+          <div>
+            <h3>Cinnamoroll's Cashier</h3>
+            <p>Collect your hard-earned money!</p>
+          </div>
+        </div>
+
+        <div class="cashier-display">
+          <div class="cashier-emoji">🐰💗</div>
+
+          <h3>Thank you for visiting!</h3>
+
+          <p id="cashier-message">
+            Your register is waiting for its first customer!
+          </p>
+
+          <div class="cashier-total">
+            ₱<span id="cashier-total">0</span>
+          </div>
+
+          <span class="cashier-label">
+            CUSTOMER'S PAYMENT
+          </span>
+        </div>
+
+        <button class="cashier-button" id="collect-button" disabled>
+          🪙 Collect Payment
+        </button>
+
+      </div>
+
+      <!-- GAME TIP -->
+      <div class="tip-card">
+        ☁️ <strong>Cinnamoroll's tip:</strong>
+        Take orders, bake the correct treats, serve your customers,
+        and collect your money! Save ₱500 to unlock your special
+        birthday letter! 💌
+      </div>
+
+    </section>
+
+    <!-- BIRTHDAY LETTER -->
+    <section class="letter-section" id="letter-section">
+
+      <div class="locked-icon" id="lock-icon">🔒</div>
+
+      <h2>A Special Birthday Surprise ♡</h2>
+
+      <p id="letter-description">
+        There's something waiting for you, but you'll need to earn
+        ₱500 to unlock it!
+      </p>
+
+      <button id="letter-button" class="letter-button" disabled>
+        🔒 Locked Birthday Letter
+      </button>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>Made with endless love ♡</p>
+      <p>☁ A little piece of happiness, just for you ☁</p>
+    </footer>
+
+  </main>
+
+  <!-- BIRTHDAY LETTER POPUP -->
+  <div class="modal" id="letter-modal">
+
+    <div class="letter-paper">
+
+      <button class="close-button" id="close-letter">×</button>
+
+      <div class="letter-decoration">💌 ☁ ♡ ☁ 💌</div>
+
+      <p class="letter-eyebrow">A LETTER JUST FOR YOU</p>
+
+      <h2>Happy Birthday, My Love! ♡</h2>
+
+      <div class="letter-content">
+
+        <p>To my favorite person,</p>
+
+        <p>Happy birthday, my love! ♡</p>
+
+        <p>
+          I hope today reminds you of just how special you are.
+          I wish I could wrap all the happiness in the world
+          and give it to you, because that's exactly what you deserve. 
+          YOU DESERVE ALL THE HAPPINESS IN THE WORLD MYLUVY!!!
+        </p>
+
+        <p>
+          Thank you for being you. Thank you for all the little
+          things you do, for the smiles you give me, and for making
+          my days brighter just by being part of them.
+        </p>
+
+        <p>
+          I hope this new chapter of your life brings you countless
+          reasons to smile, dreams that come true, and beautiful
+          memories that you'll keep forever and ever.
+        </p>
+
+        <p>
+          Even if i couldn't celebrate there in person with you..
+          i am still very happy that i am the person that is with you
+          on your birthday. I will always be cheering
+          for you, supporting you, and loving you through every
+          little adventure life brings.
+        </p>
+
+        <p>
+          You are my favorite person, my sweetest blessing,
+          my lovely wifey, my cutiee bebi, my beautiful asawa,
+          and someone I will never get tired of choosing.
+        </p>
+
+        <p>
+          I love you so, so much. Happy birthday, myluvyy! ♡
+        </p>
+
+        <p class="letter-signature">
+          Forever yours,<br>
+          Your favorite hubbyy ♡
+        </p>
+
+      </div>
+
+      <div class="letter-bottom">
+        ♡ Made with all my love ♡
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
