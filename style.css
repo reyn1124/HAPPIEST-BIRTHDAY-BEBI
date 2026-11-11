@@ -1,0 +1,945 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap');
+
+:root {
+  --blue: #a9dff5;
+  --dark-blue: #69afd2;
+  --light-blue: #eaf8ff;
+  --pink: #ffdce9;
+  --dark-pink: #f49fbd;
+  --white: #ffffff;
+  --text: #638ba5;
+  --cream: #fffaf5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(180deg, #e6f7ff, #fff0f6, #f3faff);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 25px 15px;
+  background: rgba(255,255,255,0.7);
+  border-bottom: 2px solid #d9f0ff;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  color: #66acd0;
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.header-subtitle {
+  font-size: 0.8rem;
+  color: #a1b9c9;
+  margin-top: 3px;
+}
+
+main {
+  max-width: 750px;
+  margin: auto;
+  padding: 25px 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.cloud {
+  position: fixed;
+  font-size: 100px;
+  color: rgba(255,255,255,0.7);
+  pointer-events: none;
+  animation: float 5s ease-in-out infinite;
+}
+
+.cloud-one {
+  top: 12%;
+  left: -15px;
+}
+
+.cloud-two {
+  top: 40%;
+  right: -20px;
+  animation-delay: 1s;
+}
+
+.cloud-three {
+  bottom: 10%;
+  left: 5%;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.welcome {
+  text-align: center;
+  padding: 35px 15px;
+}
+
+.character {
+  display: inline-block;
+  font-size: 3rem;
+  background: white;
+  padding: 15px 25px;
+  border-radius: 50%;
+  box-shadow: 0 7px 20px #b9e5f555;
+  margin-bottom: 15px;
+  animation: float 3s infinite;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #ef9fbc;
+}
+
+.welcome h1 {
+  font-family: 'Quicksand', sans-serif;
+  color: #69afd2;
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 12px 0;
+}
+
+.welcome-text {
+  max-width: 430px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.welcome-decoration {
+  margin-top: 18px;
+  color: #eea9c5;
+  letter-spacing: 7px;
+}
+
+.money-card {
+  background: white;
+  padding: 23px;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px #9ccfe522;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin: 10px 0 40px;
+  border: 2px solid #e1f4ff;
+}
+
+.money-label {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  font-weight: 900;
+  color: #a5bdce;
+}
+
+.money-card h2 {
+  color: #68afd1;
+  font-size: 2.5rem;
+}
+
+.coin-icon {
+  font-size: 2.8rem;
+  align-self: center;
+}
+
+.progress-area {
+  grid-column: 1 / -1;
+  margin-top: 5px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  height: 13px;
+  background: #edf6fc;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #a6ddf5, #f7b5d0);
+  border-radius: 20px;
+  transition: width 0.5s;
+}
+
+.game-section {
+  margin-bottom: 45px;
+}
+
+.section-heading {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.section-heading > span {
+  font-size: 2rem;
+}
+
+.section-heading h2 {
+  color: #69afd2;
+  font-size: 1.35rem;
+}
+
+.section-heading p {
+  font-size: 0.8rem;
+}
+
+.order-card {
+  background: linear-gradient(120deg, #fff, #f3faff);
+  border: 2px dashed #b8e4f8;
+  border-radius: 23px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.order-emoji {
+  font-size: 3.5rem;
+  background: white;
+  border-radius: 20px;
+  padding: 12px;
+}
+
+.order-tag {
+  font-size: 0.65rem;
+  color: #e99db9;
+  letter-spacing: 2px;
+  font-weight: 900;
+}
+
+.order-info h3 {
+  color: #68a9cc;
+  font-size: 1.2rem;
+}
+
+.order-info p {
+  font-size: 0.85rem;
+  margin: 4px 0;
+}
+
+.reward {
+  font-size: 0.85rem;
+  color: #e99db9;
+}
+
+.baking-card {
+  background: white;
+  padding: 24px;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px #9ccfe522;
+  border: 2px solid #e6f5ff;
+}
+
+.baking-card h3 {
+  color: #69afd2;
+  font-size: 1.2rem;
+}
+
+.instruction {
+  font-size: 0.85rem;
+  margin: 5px 0 20px;
+}
+
+.ingredients {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.ingredient {
+  background: #f2faff;
+  border: 2px solid #e3f3fc;
+  border-radius: 15px;
+  padding: 13px 5px;
+  font-family: inherit;
+  color: #709db7;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.ingredient span {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 4px;
+}
+
+.ingredient:hover {
+  transform: translateY(-4px);
+  background: #fff0f6;
+}
+
+.ingredient.selected {
+  background: #ffeaf2;
+  border-color: #f3a9c5;
+  color: #dc8eac;
+  transform: scale(0.96);
+}
+
+.selected-area {
+  margin: 22px 0;
+}
+
+.selected-area p {
+  font-size: 0.85rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.selected-ingredients {
+  min-height: 55px;
+  padding: 12px;
+  border-radius: 13px;
+  background: #fff8fb;
+  border: 2px dashed #f4c5d7;
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.selected-item {
+  background: white;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 7px #0000000a;
+}
+
+.empty-bowl {
+  color: #b9c9d5;
+  font-size: 0.8rem;
+}
+
+.bake-button, .letter-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(100deg, #8bcdeb, #b3e5f8);
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.bake-button:hover, .letter-button:not(:disabled):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 15px #8bcdeb66;
+}
+
+.clear-button {
+  display: block;
+  margin: 12px auto;
+  background: none;
+  border: none;
+  color: #e69fba;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.game-message {
+  margin-top: 15px;
+  padding: 12px;
+  background: #f2faff;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  min-height: 42px;
+}
+
+.tip-card {
+  background: #fff1f6;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 17px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.letter-section {
+  background: white;
+  border: 2px dashed #f0bfd2;
+  border-radius: 25px;
+  text-align: center;
+  padding: 35px 25px;
+  box-shadow: 0 8px 25px #e9b7cc22;
+}
+
+.locked-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.letter-section h2 {
+  color: #e69fba;
+  font-size: 1.5rem;
+}
+
+.letter-section p {
+  font-size: 0.9rem;
+  margin: 12px auto 20px;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+.letter-button {
+  background: linear-gradient(100deg, #f4b5ce, #f9cddd);
+}
+
+.letter-button:disabled {
+  background: #d9dfe5;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 10px 20px;
+  font-size: 0.8rem;
+  color: #9ebaca;
+  line-height: 2;
+}
+
+/* LETTER MODAL */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: #527d9bbd;
+  z-index: 10;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.modal.show {
+  display: flex;
+  animation: fadeIn 0.4s;
+}
+
+.letter-paper {
+  background: #fffdf9;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px #234c6566;
+  position: relative;
+  animation: popIn 0.5s;
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 17px;
+  background: none;
+  border: none;
+  color: #e69fba;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.letter-decoration {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.letter-eyebrow {
+  text-align: center;
+  letter-spacing: 3px;
+  color: #e69fba;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.letter-paper h2 {
+  text-align: center;
+  color: #70b3d4;
+  font-family: 'Quicksand', sans-serif;
+  margin: 12px 0 25px;
+  font-size: 1.7rem;
+}
+
+.letter-content {
+  color: #7c8491;
+  font-size: 0.93rem;
+  line-height: 1.9;
+}
+
+.letter-content p {
+  margin-bottom: 17px;
+}
+
+.letter-signature {
+  color: #df94b1;
+  font-weight: 900;
+  text-align: right;
+  margin-top: 25px;
+}
+
+.letter-bottom {
+  text-align: center;
+  margin-top: 25px;
+  color: #e69fba;
+  font-weight: 900;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    padding: 15px 12px;
+  }
+
+  .ingredients {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .order-card {
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .order-emoji {
+    font-size: 2.5rem;
+  }
+
+  .baking-card {
+    padding: 18px;
+  }
+
+  .letter-paper {
+    padding: 30px 22px;
+  }
+}
+
+
+/* ===== CINNAMOROLL BAKERY THEME ===== */
+
+.mascot-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: linear-gradient(120deg, #e4f6ff, #fff0f7);
+  border: 2px solid white;
+  border-radius: 23px;
+  padding: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 20px #a9dff533;
+}
+
+.mascot {
+  font-size: 2.6rem;
+  background: white;
+  border-radius: 50%;
+  padding: 12px;
+  flex-shrink: 0;
+  animation: float 3s infinite;
+}
+
+.mascot-card h3 {
+  color: #69afd2;
+}
+
+.mascot-card p {
+  font-size: .85rem;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+.station-card {
+  background: white;
+  border: 2px solid #e3f3fc;
+  border-radius: 24px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 25px #9ccfe522;
+}
+
+.station-title {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 18px;
+}
+
+.station-title > span {
+  font-size: 2rem;
+}
+
+.station-title h3 {
+  color: #69afd2;
+  font-size: 1.2rem;
+}
+
+.station-title p {
+  font-size: .8rem;
+  margin-top: 3px;
+}
+
+.customer-display {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 17px;
+  background: #f2faff;
+  border-radius: 18px;
+  margin-bottom: 17px;
+}
+
+.customer-emoji {
+  font-size: 2.8rem;
+  background: white;
+  border-radius: 50%;
+  padding: 10px;
+  flex-shrink: 0;
+}
+
+.customer-display h3 {
+  color: #69afd2;
+  font-size: 1rem;
+}
+
+.customer-display p {
+  font-size: .8rem;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.station-button {
+  width: 100%;
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  font-family: inherit;
+  font-size: .95rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.station-button:hover:not(:disabled),
+.cashier-button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 15px #9ccfe544;
+}
+
+.blue-button {
+  background: linear-gradient(100deg, #8bcdeb, #b5e6f8);
+  color: white;
+}
+
+.pink-button {
+  background: linear-gradient(100deg, #f2acc8, #f9d1e1);
+  color: white;
+}
+
+.station-button:disabled,
+.cashier-button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.station-card .order-card {
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+
+.serving-display {
+  background: #fff6fa;
+  border: 2px dashed #f3c5d9;
+  border-radius: 18px;
+  min-height: 115px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.serving-display span {
+  font-size: 2.5rem;
+}
+
+.serving-display p {
+  font-size: .85rem;
+  margin-top: 7px;
+}
+
+.cashier-card {
+  background: linear-gradient(145deg, #ffffff, #fff2f7);
+  border-color: #f5c8dc;
+}
+
+.cashier-display {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 18px;
+  margin-bottom: 17px;
+}
+
+.cashier-emoji {
+  font-size: 2.8rem;
+  margin-bottom: 8px;
+}
+
+.cashier-display h3 {
+  color: #df99b6;
+}
+
+.cashier-display p {
+  font-size: .82rem;
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.cashier-total {
+  color: #68afd2;
+  font-size: 2.7rem;
+  font-weight: 900;
+  margin-top: 12px;
+}
+
+.cashier-label {
+  font-size: .65rem;
+  letter-spacing: 2px;
+  color: #b0bdca;
+  font-weight: 900;
+}
+
+.cashier-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(100deg, #f5a9c6, #f8cfe0);
+  color: white;
+  font-family: inherit;
+  font-size: .95rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.ingredient:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+.cashier-button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+@media(max-width: 500px) {
+  .station-card {
+    padding: 16px;
+  }
+
+  .mascot-card {
+    padding: 14px;
+  }
+
+  .customer-display {
+    padding: 12px;
+  }
+}
+
+/* ===== CINNAMOROLL RECIPE BOOK ===== */
+
+.recipe-book-card {
+  background: linear-gradient(145deg, #e8f7ff, #fff4f9);
+  border: 2px solid #c5e9fa;
+  border-radius: 25px;
+  padding: 22px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 22px #a9dff533;
+}
+
+.recipe-book-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 17px;
+}
+
+.recipe-book-icon {
+  background: white;
+  border-radius: 18px;
+  padding: 15px;
+  font-size: 2.3rem;
+  box-shadow: 0 4px 12px #9ccfe522;
+}
+
+.recipe-book-label {
+  color: #e6a4c1;
+  font-size: .65rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.recipe-book-header h3 {
+  color: #69afd2;
+  margin: 5px 0;
+}
+
+.recipe-book-header p {
+  font-size: .78rem;
+  line-height: 1.5;
+}
+
+.recipe-book-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(100deg, #8bcdeb, #b8e8f9);
+  color: white;
+  font-family: inherit;
+  font-size: .95rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.recipe-book-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px #9ccfe555;
+}
+
+.recipe-book-content {
+  margin-top: 18px;
+}
+
+.recipe-book-content[hidden] {
+  display: none;
+}
+
+.recipe-book-intro {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  color: #69afd2;
+  font-size: .85rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.recipe-entry {
+  background: white;
+  border: 1px solid #d9eff9;
+  border-radius: 17px;
+  padding: 14px;
+  transition: .2s;
+}
+
+.recipe-entry:hover {
+  transform: translateY(-3px);
+  border-color: #91cfea;
+}
+
+.recipe-entry-emoji {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.recipe-entry h4 {
+  color: #69afd2;
+  font-size: .9rem;
+  margin-bottom: 6px;
+}
+
+.recipe-entry p {
+  font-size: .75rem;
+  line-height: 1.6;
+  color: #8496a5;
+}
+
+.recipe-entry .recipe-price {
+  display: inline-block;
+  background: #fff0f6;
+  color: #dc92b2;
+  padding: 5px 9px;
+  border-radius: 12px;
+  font-weight: 900;
+  margin-top: 10px;
+  font-size: .75rem;
+}
+
+.recipe-book-footer {
+  text-align: center;
+  color: #d997b5;
+  font-size: .8rem;
+  font-weight: 800;
+  margin-top: 18px;
+  padding: 12px;
+}
+
+@media(max-width: 400px) {
+  .recipe-list {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-book-header {
+    align-items: flex-start;
+  }
+}
